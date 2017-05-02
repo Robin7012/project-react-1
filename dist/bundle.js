@@ -27446,7 +27446,7 @@ function component() {
     var element = __WEBPACK_IMPORTED_MODULE_1_jquery___default()('<div></div>');
     /* lodash is required for the next line to work */
     // element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-    element.html(__WEBPACK_IMPORTED_MODULE_0_lodash___default.a.join(['Hi', 'webpack'], ' '));
+    element.html(__WEBPACK_IMPORTED_MODULE_0_lodash___default.a.join(['Hello', 'webpack'], ' '));
 
     // return element;
     return element.get(0);

@@ -1,11 +1,15 @@
 import _ from 'lodash';
-function component () {
-  var element = document.createElement('div');
+import $ from 'jquery';
 
-  /* lodash is required for the next line to work */
-  element.innerHTML = _.join(['Hello','webpack'], ' ');
+function component() {
+    //   var element = document.createElement('div');
+    var element = $('<div></div>');
+    /* lodash is required for the next line to work */
+    // element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+    element.html(_.join(['Hello', 'webpack'], ' '));
 
-  return element;
+    // return element;
+    return element.get(0);
 }
 
 document.body.appendChild(component());

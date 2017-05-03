@@ -14,4 +14,4 @@ function tick() {
   ReactDOM.render(element, document.getElementById('root'))
 }
 // setInterval(tick, 1000);
-ReactDOM.render(<Welcome/>, document.getElementById('root'))
+ReactDOM.render(<Welcome name="frank"/>, document.getElementById('root'))

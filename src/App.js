@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import TodoInput from './TodoInput'
 
 class App extends Component {
   constructor(props){
@@ -7,7 +8,9 @@ class App extends Component {
     this.state = {
       newTodo:'test',
       todoList:[
-        {id:'1',title:'第一个待办'}
+        {id:'1',title:'第一个待办',status:'completed',deleted:false },
+        {id:'2',title:'第二个待办',status:'completed',deleted:false },
+        {id:'3',title:'第三个待办',status:'completed',deleted:true }
       ]
     }
   }
@@ -20,7 +23,7 @@ class App extends Component {
       <div className="App">
         <h1>我的代办</h1>
         <div className="inputWrapper">
-          <input type="text" value={this.state.newTodo} />
+          <TodoInput content={this.state.newTodo}/>
         </div>
      
         <ol>

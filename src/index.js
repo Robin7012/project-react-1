@@ -13,7 +13,7 @@ import Welcome from './Welcome'
   )
   ReactDOM.render(element, document.getElementById('root'))
 }*/
-class Clock extends React.Component {
+/*class Clock extends React.Component {
   constructor(props){
     super(props);
     this.state = {date : new Date()};
@@ -41,7 +41,7 @@ class Clock extends React.Component {
       </div>
     )
   }
-}
+}*/
 // setInterval(tick, 1000); 
-ReactDOM.render(<Welcome />,
+ReactDOM.render(<App />,
           document.getElementById('root'))

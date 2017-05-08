@@ -12,7 +12,6 @@ export default class TodoInput extends Component{
         }
     }
     changeTitle(e){
-        debugger;
         this.props.onChange(e);
     }
 }

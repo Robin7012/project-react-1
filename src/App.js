@@ -36,7 +36,7 @@ class App extends Component {
           />
         </div>
      
-        <ol>
+        <ol className="todoList">
           {todos}
         </ol>
        </div>

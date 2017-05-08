@@ -21,7 +21,9 @@ class App extends Component {
   render() {
     let todos  = this.state.todoList.map((item,index)=>{
       return <li key={index}>
-                <TodoItem todo={item} onToggle = {this.toggle.bind(this)}/>
+                <TodoItem todo={item} onToggle = {this.toggle.bind(this)}
+                onDelete={this.delete.bind(this)}
+                />
              </li>
     })
     return (
@@ -29,7 +31,8 @@ class App extends Component {
         <h1>我的代办</h1>
         <div className="inputWrapper">
           <TodoInput content={this.state.newTodo} onSubmit={this.addTodo.bind(this)}
-          onChange={this.changeTitle.bind(this)}
+           onChange={this.changeTitle.bind(this)}
+           
           />
         </div>
      
@@ -63,6 +66,10 @@ class App extends Component {
    }
     toggle(e, todo){
       todo.status = todo.status === 'completed' ? '' : 'completed'
+      this.setState(this.state) 
+    }
+    delete(e,todo){
+      todo.deleted = true;
       this.setState(this.state) 
     }
 }
